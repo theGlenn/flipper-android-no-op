@@ -1,5 +1,5 @@
 # flipper-android-no-op
-No-op repository when using Flipper Android in **release** mode.
+No-op dependency when using Flipper Android in **release** mode.
 
 [![](https://jitpack.io/v/theGlenn/flipper-android-no-op.svg)](https://jitpack.io/#theGlenn/flipper-android-no-op)
 ![GitHub](https://img.shields.io/github/license/theglenn/flipper-android-no-op.svg)
