@@ -20,7 +20,7 @@ allprojects {
 
 dependencies {
   //The important part
-  releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.2.0'
+  releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.3.0'
   debugImplementation 'com.facebook.soloader:soloader:0.5.1'
   debugImplementation 'com.facebook.flipper:flipper:0.23.4'
 }
