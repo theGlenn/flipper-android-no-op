@@ -26,7 +26,7 @@ dependencies {
 }
 ```
 
-In your `Application` class same as [this](https://fbflipper.com/docs/getting-started.html) :
+In your `Application` class same as [this](https://fbflipper.com/docs/getting-started/android-native#application-setup) :
 ```java
 public class MyApplication extends Application {
 
