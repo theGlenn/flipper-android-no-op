@@ -1,4 +1,4 @@
-package com.facebook.flipper.android
+package com.facebook.flipper.core
 
 class FlipperClient {
     fun addPlugin(plugin: Any? = null) {
