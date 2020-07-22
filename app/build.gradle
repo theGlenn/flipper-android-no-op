@@ -36,6 +36,7 @@ dependencies {
     debugImplementation 'com.facebook.flipper:flipper:0.30.2'
     debugImplementation 'com.facebook.flipper:flipper-network-plugin:0.30.2'
     releaseImplementation project(':flipperandroidnoop')
+    releaseImplementation project(':soloadernoop')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

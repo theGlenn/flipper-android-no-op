@@ -1,1 +1,1 @@
-include ':app', ':flipperandroidnoop'
+include ':app', ':flipperandroidnoop', ':soloadernoop'
