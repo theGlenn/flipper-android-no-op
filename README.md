@@ -20,9 +20,17 @@ allprojects {
 
 dependencies {
   //The important part
-  releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.3.0'
-  debugImplementation 'com.facebook.soloader:soloader:0.5.1'
-  debugImplementation 'com.facebook.flipper:flipper:0.23.4'
+  def flipper_version = '0.35.0'
+  debugImplementation "com.facebook.flipper:flipper:$flipper_version"
+  debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipper_version"
+  debugImplementation 'com.facebook.soloader:soloader:0.8.2'
+
+   // Include `flipperandroidnoop` and  `soloadernoop` individually
+  releaseImplementation 'com.github.theGlenn:flipper-android-no-op:flipperandroidnoop:0.4.0'
+  releaseImplementation 'com.github.theGlenn:flipper-android-no-op:soloadernoop:0.4.0'
+
+  // Includes both libraries
+  releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.4.0'
 }
 ```
 
