@@ -1,9 +1,9 @@
-package com.facebook.flipper.plugins.databases
+package com.facebook.flipper.plugins.leakcanary2
 
-import android.content.Context
 import com.facebook.flipper.core.FlipperPlugin
 
-class DatabasesFlipperPlugin(context: Context) : FlipperPlugin {
+
+class LeakCanary2FlipperPlugin: FlipperPlugin {
 
     override fun onConnect(connection: Any?) {
         // no op
@@ -19,4 +19,5 @@ class DatabasesFlipperPlugin(context: Context) : FlipperPlugin {
         @JvmStatic
         val ID: String = ""
     }
+
 }
