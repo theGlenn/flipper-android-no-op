@@ -5,16 +5,6 @@ import com.facebook.flipper.core.FlipperPlugin
 
 class SharedPreferencesFlipperPlugin : FlipperPlugin {
 
-    override fun onConnect(connection: Any?) {
-        // no op
-    }
-
-    override fun onDisconnect() {
-        // no op
-    }
-
-    override fun runInBackground(): Boolean = false
-
     constructor(context: Context)
 
     @JvmOverloads

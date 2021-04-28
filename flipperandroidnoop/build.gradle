@@ -41,6 +41,8 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:logging-interceptor:4.4.1'
     implementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+    implementation 'com.facebook.flipper:flipper-noop:' + flipper_version
 }
 repositories {
     mavenCentral()
