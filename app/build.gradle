@@ -32,7 +32,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-    def flipper_version = '0.81.0'
+    def flipper_version = '0.85.0'
     debugImplementation "com.facebook.flipper:flipper:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
