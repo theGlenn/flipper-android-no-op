@@ -2,21 +2,24 @@ package com.facebook.flipper.plugins.databases
 
 import android.content.Context
 import com.facebook.flipper.core.FlipperPlugin
+import java.util.*
 
-class DatabasesFlipperPlugin(context: Context) : FlipperPlugin {
+class DatabasesFlipperPlugin:FlipperPlugin {
+    constructor(context: Context?)
+
+    constructor(databaseDriver: DatabaseDriver<*>?)
+
+    constructor(databaseDriverList: ArrayList<DatabaseDriver<*>>?)
 
     override fun onConnect(connection: Any?) {
-        // no op
     }
 
     override fun onDisconnect() {
-        // no op
+
     }
 
-    override fun runInBackground(): Boolean = false
+    override fun runInBackground() = false
 
-    companion object {
-        @JvmStatic
-        val ID: String = ""
-    }
+
+
 }

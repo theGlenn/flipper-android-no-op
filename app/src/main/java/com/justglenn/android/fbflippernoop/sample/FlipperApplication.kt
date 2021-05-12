@@ -5,6 +5,8 @@ import com.facebook.flipper.android.AndroidFlipperClient
 import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.flipper.plugins.crashreporter.CrashReporterPlugin
 import com.facebook.flipper.plugins.databases.DatabasesFlipperPlugin
+import com.facebook.flipper.plugins.databases.impl.SqliteDatabaseDriver
+import com.facebook.flipper.plugins.databases.impl.SqliteDatabaseProvider
 import com.facebook.flipper.plugins.inspector.DescriptorMapping
 import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin
 import com.facebook.flipper.plugins.leakcanary2.FlipperLeakListener
@@ -36,6 +38,9 @@ class FlipperApplication : Application() {
                 addPlugin(NetworkFlipperPlugin())
                 addPlugin(InspectorFlipperPlugin(this@FlipperApplication, DescriptorMapping.withDefaults()))
                 addPlugin(DatabasesFlipperPlugin(this@FlipperApplication))
+                addPlugin(DatabasesFlipperPlugin(SqliteDatabaseDriver(this@FlipperApplication, SqliteDatabaseProvider {
+                    emptyList() //database file list
+                })))
                 addPlugin(SharedPreferencesFlipperPlugin(this@FlipperApplication))
                 addPlugin(LeakCanary2FlipperPlugin())
                 addPlugin(NavigationFlipperPlugin.getInstance())
