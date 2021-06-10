@@ -20,6 +20,8 @@ class DatabasesFlipperPlugin:FlipperPlugin {
 
     override fun runInBackground() = false
 
-
-
+    companion object {
+        @JvmStatic
+        val ID: String = ""
+    }
 }
