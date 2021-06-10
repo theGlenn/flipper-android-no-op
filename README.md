@@ -20,17 +20,20 @@ allprojects {
 
 dependencies {
     //The important part
-    def flipper_version = '0.35.0'
+    def flipper_version = '0.87.0'
     debugImplementation "com.facebook.flipper:flipper:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipper_version"
-    debugImplementation 'com.facebook.soloader:soloader:0.8.2'
+    debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
+    debugImplementation 'com.facebook.soloader:soloader:0.10.1'
+    
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 
     // Include `flipperandroidnoop` and  `soloadernoop` individually
-    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.4.0'
-    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:soloadernoop:0.4.0'
+    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.6.0'
+    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:soloadernoop:0.6.0'
 
     // Includes both libraries
-    releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.4.0'
+    releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.6.0'
 }
 ```
 
@@ -44,6 +47,7 @@ public class MyApplication extends Application {
 
     if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
       final FlipperClient client = AndroidFlipperClient.getInstance(this);
+      client.addPlugin(NetworkFlipperPlugin())
       client.addPlugin(new InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()));
       client.start();
     }
