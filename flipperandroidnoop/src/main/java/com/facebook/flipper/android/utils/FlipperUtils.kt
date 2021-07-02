@@ -4,6 +4,7 @@ import android.content.Context
 
 
 object FlipperUtils {
+    @JvmStatic
     fun shouldEnableFlipper(context: Context): Boolean {
         return false
     }
