@@ -29,11 +29,11 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 
     // Include `flipperandroidnoop` and  `soloadernoop` individually
-    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.7.0'
-    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:soloadernoop:0.7.0'
+    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.8.0'
+    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:soloadernoop:0.8.0'
 
     // Includes both libraries
-    releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.7.0'
+    releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.8.0'
 }
 ```
 
