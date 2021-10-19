@@ -5,7 +5,6 @@ import okhttp3.Response
 
 class FlipperOkhttpInterceptor(
     private val plugin: NetworkFlipperPlugin,
-    private val long maxBodyBytes,
     private val boolean isMockResponseSupported
 ) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
