@@ -26,7 +26,7 @@ dependencies {
     debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
     debugImplementation 'com.facebook.soloader:soloader:0.10.3'
     
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 
     // Include `flipperandroidnoop` and  `soloadernoop` individually
     releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.9.0'
