@@ -8,7 +8,7 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.justglenn.android.fbflippernoop.sample"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -33,12 +33,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    def flipper_version = '0.87.0'
+    // def flipper_version = '0.87.0'
 
     debugImplementation "com.facebook.flipper:flipper:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
-    debugImplementation 'com.facebook.soloader:soloader:0.10.1'
+    debugImplementation 'com.facebook.soloader:soloader:0.10.4'
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
     releaseImplementation project(':flipperandroidnoop')
