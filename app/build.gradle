@@ -40,7 +40,7 @@ dependencies {
     debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
     debugImplementation 'com.facebook.soloader:soloader:0.10.1'
 
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
     releaseImplementation project(':flipperandroidnoop')
     releaseImplementation project(':soloadernoop')
 
