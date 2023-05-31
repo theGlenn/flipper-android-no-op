@@ -20,7 +20,7 @@ allprojects {
 
 dependencies {
     //The important part
-    def flipper_version = '0.190.0'
+    def flipper_version = '0.191.1'
     debugImplementation "com.facebook.flipper:flipper:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
