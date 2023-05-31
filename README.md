@@ -20,7 +20,7 @@ allprojects {
 
 dependencies {
     //The important part
-    def flipper_version = '0.177.0'
+    def flipper_version = '0.191.1'
     debugImplementation "com.facebook.flipper:flipper:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-network-plugin:$flipper_version"
     debugImplementation "com.facebook.flipper:flipper-leakcanary2-plugin:$flipper_version"
@@ -29,8 +29,8 @@ dependencies {
     // debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 
     // Include `flipperandroidnoop` and  `soloadernoop` individually
-    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.10.0'
-    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:soloadernoop:0.10.0'
+    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:flipperandroidnoop:0.11.0'
+    releaseImplementation 'com.github.theGlenn.flipper-android-no-op:soloadernoop:0.11.0'
 
     // Includes both libraries
     releaseImplementation 'com.github.theGlenn:flipper-android-no-op:0.10.0'
