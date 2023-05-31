@@ -1,17 +1,20 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.github.dcendents.android-maven'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'maven-publish'
+}
 
 android {
-    compileSdkVersion 33
+    namespace 'com.facebook.flipper'
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -22,30 +25,34 @@ android {
     }
 
     afterEvaluate {
-        generateReleaseBuildConfig.enabled = false
-        generateDebugBuildConfig.enabled = false
-        generateReleaseResValues.enabled = false
-        generateDebugResValues.enabled = false
+        // generateReleaseBuildConfig.enabled = false
+        // generateDebugBuildConfig.enabled = false
+        // generateReleaseResValues.enabled = false
+        // generateDebugResValues.enabled = false
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
+    def flipper_version = '0.190.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.5.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.squareup.okhttp3:logging-interceptor:4.4.1'
 
     api 'com.facebook.flipper:flipper-noop:' + flipper_version
 
-    def sqlite_version = "2.3.0"
+    def sqlite_version = "2.3.1"
     implementation "androidx.sqlite:sqlite-ktx:$sqlite_version"
-}
-repositories {
-    mavenCentral()
 }

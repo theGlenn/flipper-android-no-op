@@ -1,6 +1,7 @@
 package com.justglenn.android.fbflippernoop.sample
 
 import android.app.Application
+import com.facebook.flipper.BuildConfig
 import com.facebook.flipper.android.AndroidFlipperClient
 import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.flipper.plugins.crashreporter.CrashReporterPlugin
