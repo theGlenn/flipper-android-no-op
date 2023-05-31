@@ -1,0 +1,3 @@
+package leakcanary
+
+interface EventListener

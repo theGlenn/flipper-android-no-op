@@ -2,7 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.6.0'
-    ext.flipper_version = '0.177.0'
+    ext.flipper_version = '0.190.0'
     ext.soloader_version = '0.10.4'
 
     repositories {
