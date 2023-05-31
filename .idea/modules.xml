@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/flipper-android-no-op.iml" filepath="$PROJECT_DIR$/.idea/modules/flipper-android-no-op.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flipper-android-no-op.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/flipperandroidnoop/flipper-android-no-op.flipperandroidnoop.iml" filepath="$PROJECT_DIR$/.idea/modules/flipperandroidnoop/flipper-android-no-op.flipperandroidnoop.iml" />

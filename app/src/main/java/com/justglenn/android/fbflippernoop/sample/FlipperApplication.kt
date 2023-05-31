@@ -4,6 +4,7 @@ import android.app.Application
 import com.facebook.flipper.BuildConfig
 import com.facebook.flipper.android.AndroidFlipperClient
 import com.facebook.flipper.android.utils.FlipperUtils
+import com.facebook.flipper.core.FlipperConnection
 import com.facebook.flipper.plugins.crashreporter.CrashReporterPlugin
 import com.facebook.flipper.plugins.databases.DatabaseDescriptor
 import com.facebook.flipper.plugins.databases.DatabaseDriver
@@ -17,6 +18,8 @@ import com.facebook.flipper.plugins.leakcanary2.LeakCanary2FlipperPlugin
 import com.facebook.flipper.plugins.navigation.NavigationFlipperPlugin
 import com.facebook.flipper.plugins.network.NetworkFlipperPlugin
 import com.facebook.flipper.plugins.sharedpreferences.SharedPreferencesFlipperPlugin
+import com.facebook.flipper.plugins.uidebugger.UIDebuggerFlipperPlugin
+import com.facebook.flipper.plugins.uidebugger.core.UIDContext
 import com.facebook.soloader.SoLoader
 import leakcanary.LeakCanary
 
@@ -90,6 +93,10 @@ class FlipperApplication : Application() {
                 }))
             }
 
+            val uidContext: UIDContext = UIDContext.Companion.create(this)
+            UIDebuggerLithoSupport.INSTANCE.enable(uidContext)
+
+            client.addPlugin(UIDebuggerFlipperPlugin(uidContext))
             client.start()
         }
     }

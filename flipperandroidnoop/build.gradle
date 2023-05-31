@@ -41,7 +41,6 @@ android {
 }
 
 dependencies {
-    def flipper_version = '0.190.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
@@ -51,6 +50,7 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:logging-interceptor:4.4.1'
 
+    def flipper_version = '0.191.1'
     api 'com.facebook.flipper:flipper-noop:' + flipper_version
 
     def sqlite_version = "2.3.1"
