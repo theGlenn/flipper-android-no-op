@@ -1,10 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'maven-publish'
 }
-
-group = 'com.github.theGlenn:flipper-android-no-op'
 
 android {
     namespace 'com.plangrid.android.soloadernoop'
