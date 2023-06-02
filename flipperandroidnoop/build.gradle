@@ -1,9 +1,10 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
     id 'maven-publish'
 }
+
+group = 'com.github.theGlenn:flipper-android-no-op'
 
 android {
     namespace 'com.facebook.flipper'
@@ -25,10 +26,8 @@ android {
     }
 
     afterEvaluate {
-        // generateReleaseBuildConfig.enabled = false
-        // generateDebugBuildConfig.enabled = false
-        // generateReleaseResValues.enabled = false
-        // generateDebugResValues.enabled = false
+        generateReleaseResValues.enabled = false
+        generateDebugResValues.enabled = false
     }
 
     compileOptions {
