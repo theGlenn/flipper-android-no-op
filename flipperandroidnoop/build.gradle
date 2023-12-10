@@ -52,3 +52,17 @@ dependencies {
     def sqlite_version = "2.3.1"
     implementation "androidx.sqlite:sqlite-ktx:$sqlite_version"
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.theGlenn.flipper-android-no-op'
+                artifactId = 'flipperandroidnoop'
+                version = '0.11.3'
+            }
+        }
+    }
+}
