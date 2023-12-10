@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.plangrid.android.soloadernoop'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 15
