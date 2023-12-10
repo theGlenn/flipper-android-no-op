@@ -61,7 +61,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.theGlenn.flipper-android-no-op'
                 artifactId = 'flipperandroidnoop'
-                version = '0.11.3'
+                version = '0.11.4'
             }
         }
     }
